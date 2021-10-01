@@ -1,0 +1,28 @@
+{
+    "name": "theobros/settimezone",
+    "description": "Timestamp conversion in Eloquent models, time conversion functions by user timezone in Laravel-8*",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Theobros\\SetTimezone\\": "src"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Theobros\\SetTimezone\\Providers\\SetTimezoneServiceProvider"
+            ]
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Theophilus Simeon",
+            "email": "theobros05@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
