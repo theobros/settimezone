@@ -17,5 +17,9 @@ class SetTimezoneServiceProvider extends ServiceProvider
     {
         $kernel = $this->app->make(Kernel::class);
         $kernel->pushMiddleware(SetTimezoneMiddleware::class);
+
+        $this->publishes([
+            __DIR__.'/config/settimezone.php' => config_path('settimezone.php'),
+        ]);
     }
 }

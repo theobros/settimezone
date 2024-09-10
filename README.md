@@ -1,8 +1,8 @@
 # Timezone Conversion in Laravel
 
- ![](https://img.shields.io/badge/Version-1.00-green)[![GitHub license](https://img.shields.io/github/license/gothinkster/laravel-realworld-example-app.svg)](https://raw.githubusercontent.com/gothinkster/laravel-realworld-example-app/master/LICENSE)
+ ![](https://img.shields.io/badge/Version-2.00-green)[![GitHub license](https://img.shields.io/github/license/gothinkster/laravel-realworld-example-app.svg)](https://raw.githubusercontent.com/gothinkster/laravel-realworld-example-app/master/LICENSE)
 
-> ### Timestamp conversion in Eloquent models, time conversion functions by  timezone in Laravel-8.\*
+> ### Timestamp conversion in Eloquent models, time conversion functions by  timezone in Laravel-11.\*
 
 ----------
 
@@ -16,9 +16,13 @@
 
 ###### Step 1
 
+**php artisan vendor:publish --provider="Theobros\SetTimezone\SetTimezoneServiceProvider"**
+
+###### Step 2
+
 **Make sure param timezone is sent in all http request  with value as example  "Asia/kolkata" or default timezone UTC will used to convert timestamps**
 
-###### Step 2 
+###### Step 3 
 **Import SetTimeZone in required Eloquent models**
     
     <?php
@@ -33,7 +37,7 @@
     
     }
 
-**timestamps read_at, created_at,updated_at  will be automatically formatted to  datetime format "Y-m-d h:i A"**
+**timestamps read_at, created_at,updated_at,updated_at  will be automatically formatted to defaut datetime format "Y-m-d h:i A". you can change the default datetime format in config/settimezone.php**
 
 ###### Bonus
 #### Function calls 

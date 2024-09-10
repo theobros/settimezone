@@ -20,7 +20,7 @@ trait SetTimeZone
             return NULL;
         }
         try {
-            return (new Carbon($value))->setTimezone(new CarbonTimeZone(request()->timezone))->format('Y-m-d h:i A');
+            return (new Carbon($value))->setTimezone(new CarbonTimeZone(request()->timezone))->format(config('settimezone.date_format'));
         } catch (\Exception $e) {
             return NULL;
         }
@@ -38,13 +38,13 @@ trait SetTimeZone
         }
 
         try {
-            return (new Carbon($value))->setTimezone(new CarbonTimeZone(request()->timezone))->format('Y-m-d h:i A');
+            return (new Carbon($value))->setTimezone(new CarbonTimeZone(request()->timezone))->format(config('settimezone.date_format'));
         } catch (\Exception $e) {
             return NULL;
         }
     }
     /**
-     * getReadAtAttribute
+     * getUpdatedAtAttribute
      *
      * @param [timestamp] $value
      * @return time
@@ -55,7 +55,24 @@ trait SetTimeZone
             return NULL;
         }
         try {
-            return (new Carbon($value))->setTimezone(new CarbonTimeZone(request()->timezone))->format('Y-m-d h:i A');
+            return (new Carbon($value))->setTimezone(new CarbonTimeZone(request()->timezone))->format(config('settimezone.date_format'));
+        } catch (\Exception $e) {
+            return NULL;
+        }
+    }
+    /**
+     * getDeletedAtAttribute
+     *
+     * @param [timestamp] $value
+     * @return time
+     */
+    public function getDeletedAtAttribute($value)
+    {
+        if (is_null($value)) {
+            return NULL;
+        }
+        try {
+            return (new Carbon($value))->setTimezone(new CarbonTimeZone(request()->timezone))->format(config('settimezone.date_format'));
         } catch (\Exception $e) {
             return NULL;
         }
