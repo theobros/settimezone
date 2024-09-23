@@ -1,6 +1,6 @@
 {
     "name": "theobros/settimezone",
-    "description": "Timestamp conversion in Eloquent models, time conversion functions by user timezone in Laravel-8*",
+    "description": "Timestamp conversion in Eloquent models, time conversion functions by user timezone in Laravel-11*",
     "type": "library",
     "autoload": {
         "psr-4": {

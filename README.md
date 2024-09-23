@@ -2,7 +2,7 @@
 
  ![](https://img.shields.io/badge/Version-2.00-green)[![GitHub license](https://img.shields.io/github/license/gothinkster/laravel-realworld-example-app.svg)](https://raw.githubusercontent.com/gothinkster/laravel-realworld-example-app/master/LICENSE)
 
-> ### Timestamp conversion in Eloquent models, time conversion functions by  timezone in Laravel-11.\*
+> ### Timestamp conversion in Eloquent models, time conversion functions by timezone in Laravel-11.\*
 
 ----------
 
@@ -16,13 +16,17 @@
 
 ###### Step 1
 
-**php artisan vendor:publish --provider="Theobros\SetTimezone\SetTimezoneServiceProvider"**
+**php artisan vendor:publish --provider="Theobros\SetTimezone\Providers\SetTimezoneServiceProvider"**
 
 ###### Step 2
 
-**Make sure param timezone is sent in all http request  with value as example  "Asia/kolkata" or default timezone UTC will used to convert timestamps**
+**Check default timezone in app.php is set to UTC or any other timezone**
 
 ###### Step 3 
+
+**Make sure param timezone is sent in all http request  with value as example  "Asia/kolkata" or default timezone from app.php will used to convert timestamps**
+
+###### Step 4 
 **Import SetTimeZone in required Eloquent models**
     
     <?php

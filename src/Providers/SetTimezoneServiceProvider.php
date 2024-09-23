@@ -19,7 +19,7 @@ class SetTimezoneServiceProvider extends ServiceProvider
         $kernel->pushMiddleware(SetTimezoneMiddleware::class);
 
         $this->publishes([
-            __DIR__.'/config/settimezone.php' => config_path('settimezone.php'),
+            __DIR__ . '/../config/settimezone.php' => config_path('settimezone.php'),
         ]);
     }
 }
